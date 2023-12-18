@@ -70,7 +70,7 @@ const ProviderHomeContext = ({ children }) => {
         itemAnimate.style.display = "flex";
       }
       else {
-        console.log('Test');
+        console.log('');
       }
     });
   });

@@ -1,7 +1,10 @@
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { listDomaine } from "./variablesHome";
 
+
+// DONNEE REQUIS LIGNE 373 : TABLEAU DE LISTE DES DOMAINES
+// FONCTIONNALITE LIGNE 302: ENVOIE DE MESSAGE A L'ADMIN
 
 function Couverture() {
     const wingRight = useRef();
@@ -46,20 +49,19 @@ function Couverture() {
             <div
                 className="dinamicNav showNav fixed maxIndex flex w-full h-[50px] justify-between items-center  shadow bg-emerald-600 px-4" ref={dinamicNav}>
                 <h1 className="text-4xl bold text-white ">P</h1>
-                <div className="w-auto  flex  tracking-wide max-md:hidden text-white">
-                    <Link className="mx-10 pb-1 text-[#202020] border-b-2 border-[#202020] hoverLink text-md">
-                        Accueil
-                    </Link>
-                    <Link className="mx-10 text-md hoverLink pb-1">Formation</Link>
-                    <Link className="mx-10 text-md pb-1 my-0 flex hoverLink">
+                <ul className="w-auto  flex  tracking-wide max-md:hidden text-white">
+                    <li ><NavLink to='/' className="mx-10 pb-1 text-[#202020] border-b-2 border-[#202020] hoverLink text-md" > Accueil</NavLink></li>
+                    <li ><NavLink to='/go' className="mx-10 text-md hoverLink pb-1" >Formation</NavLink></li>
+                    <li > <NavLink to='/home' className="mx-10 text-md pb-1 my-0 flex hoverLink" >
                         Compte
                         <img
                             src="./images/chevronDownWhite.png"
                             className="h-4 w-4 mt-1.5  ml-2 transform m-0"
                             alt="down"
                         />
-                    </Link>
-                </div>
+                    </NavLink></li>
+                    
+                </ul>
                 <img
                     src="./images/menu.png"
                     className="h-7 w-7 cursor-pointer menuAnimate"
@@ -365,6 +367,8 @@ function Couverture() {
 
                     <div className="slider h-16  overflow-hidden mt-5 rounded-tl-xl bg-[#008F64] rounded-br-xl text-white  max-md:h-10  max-md:w-40 max-lg:rounded-tl-2xl max-lg:bg-transparent">
                         <div className="h-16  slideRecipent flex  max-md:h-10  items-center domaineScroll">
+
+                            {/* AFFICHE A LISTE DES DOMAINES DISPONIBLE */}
                             {listDomaine.map((element) => {
                                 return (
                                     <div

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Footer() {
     return <div className="h-auto w-full flex max-md:flex-col items-center bg-[#1f1f1f] px-12 pb-6">
         <div className="w-11/12 ">
-            <h1 className="text-white mt-16 text-3xl tracking-wide  text-center font-extralight max-md:w-auto"><span className="text-[#008F64] text-5xl">P</span>adawan</h1>
+            <h1 className="text-white  mt-16 text-3xl tracking-wide  max-md:text-center font-extralight max-md:w-auto"><span className="text-[#008F64] text-5xl">P</span>adawan</h1>
             <div className="flex gap-[200px] w-full text-white max-md:flex-col max-md:gap-[20px]">
                 <div className="mt-3  flex flex-col gap-2">
                     <h2 className="text-2xl">Pages</h2>

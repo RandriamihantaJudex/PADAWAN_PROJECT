@@ -1,4 +1,7 @@
 
+// FONCTIONNALITE LIGNE 16 : ENVOIE DE MESSAGE A L'ADMIN
+
+
 const sendQuestion = (e) => {
     e.preventDefault()
 }
