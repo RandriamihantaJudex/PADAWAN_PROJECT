@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['localhost:3000'],
+    'allowed_origins' => [env('FRONTEND_DOMAIN_NAME')],
 
     'allowed_origins_patterns' => [],
 
