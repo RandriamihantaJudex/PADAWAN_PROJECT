@@ -21,7 +21,9 @@ function Challenge() {
         goTo(`./challenge/${domaineChalengeAfficher.current.innerHTML}`)
     }
     const choixDomaineChallenge=(domaine)=>{
+        
         domaineChalengeAfficher.current.innerHTML = domaine
+  
         showOption()
     }
     return <div className=" w-full anime-on-show mt-10  max-md:mt-1 px-16  max-md:px-2 mb-10 max-md:mb-0 flex flex-col items-center">

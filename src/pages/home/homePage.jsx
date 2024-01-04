@@ -21,13 +21,13 @@ function Home() {
         <PopUp />
         <Couverture />
         <PresentationVideo />
-        <AllMentorList/>
+        <AllMentorList />
         <Challenge />
         <Temoignage />
         <Question />
         <FAQ />
-        <Don/>
-        <Footer/>
+        <Don />
+        <Footer />
         <div className="w-full bg-[#1f1f1f] centrer p-3 text-[#737373] max-md:text-[12px]">2023 Team Padawan All right Reserved.</div>
       </ProviderHomeContext>
     </>
@@ -94,6 +94,7 @@ const ProviderHomeContext = ({ children }) => {
     </homeContext.Provider>
   );
 };
+
 
 
 export default Home;

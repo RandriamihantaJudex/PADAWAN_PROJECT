@@ -42,13 +42,13 @@ function Footer() {
             </div>
         </div>
         <div className="h-full w-1/12 max-md:w-full max-md:items-center flex flex-col items-end justify-center pt-20">
-            <Link>
+            <a href="#">
                 <img
                     src="./images/goUp.png"
                     className="marginFleche max-md:ml-0 h-[100px] w-[100px] animate-bounce my-1.5 rotate-90 "
                     alt="chat"
                 ></img>
-            </Link>
+            </a>
             <div className="flex w-auto max-md:gap-[20px] lg:flex-col">
                 <Link>
                     <img
