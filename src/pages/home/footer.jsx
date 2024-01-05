@@ -7,37 +7,33 @@ function Footer() {
             <h1 className="text-white  mt-16 text-3xl tracking-wide  max-md:text-center font-extralight max-md:w-auto"><span className="text-[#008F64] text-5xl">P</span>adawan</h1>
             <div className="flex gap-[200px] w-full text-white max-md:flex-col max-md:gap-[20px]">
                 <div className="mt-3  flex flex-col gap-2">
-                    <h2 className="text-2xl">Pages</h2>
-                    <Link className="petit">Accueil</Link>
-                    <Link className="petit">Formation</Link>
-                    <Link className="petit">Partages</Link>
-                    <Link className="petit">Forum</Link>
-                    <Link className="petit">Inscription</Link>
-                    <Link className="petit">Connexion</Link>
+                    <h2 className="text-2xl max-md:text-[18px]">Pages</h2>
+                    <Link className="petit max-md:text-[12px]">Accueil</Link>
+                    <Link className="petit max-md:text-[12px]">Formation</Link>
+                    <Link className="petit max-md:text-[12px]">Partages</Link>
+                    <Link className="petit max-md:text-[12px]">Forum</Link>
+                    <Link className="petit max-md:text-[12px]">Inscription</Link>
+                    <Link className="petit max-md:text-[12px]">Connexion</Link>
 
                 </div>
                 <div className="mt-3 flex flex-col gap-2">
-                    <h2 className="text-2xl">Termes et informations legales</h2>
-                    <Link className="petit">Politique de confidentialité</Link>
-                    <Link className="petit">Conditions d'utilisation</Link>
+                    <h2 className="text-2xl max-md:text-[18px]">Termes et informations legales</h2>
+                    <Link className="petit max-md:text-[12px]">Politique de confidentialité</Link>
+                    <Link className="petit max-md:text-[12px]">Conditions d'utilisation</Link>
 
 
                 </div>
                 <div className="mt-3 flex flex-col gap-2 w-[200px] ">
-                    <h2 className="text-2xl">A propos</h2>
-                    <Link className="petit">L'equipe</Link>
-                    <Link className="petit">Ses partenaires</Link>
-                    <Link className="petit">Les evenements</Link>
-
-
+                    <h2 className="text-2xl max-md:text-[18px]">A propos</h2>
+                    <Link className="petit max-md:text-[12px]">L'equipe</Link>
+                    <Link className="petit max-md:text-[12px]">Ses partenaires</Link>
+                    <Link className="petit max-md:text-[12px]">Les evenements</Link>
                 </div>
                 <div className="mt-3 flex flex-col gap-2">
-                    <h2 className="text-2xl">Communauté</h2>
-                    <Link className="petit">Discord</Link>
-                    <Link className="petit">Facebook</Link>
-                    <Link className="petit">LinkedIn</Link>
-
-
+                    <h2 className="text-2xl max-md:text-[18px]">Communauté</h2>
+                    <Link className="petit max-md:text-[12px]">Discord</Link>
+                    <Link className="petit max-md:text-[12px]">Facebook</Link>
+                    <Link className="petit max-md:text-[12px]">LinkedIn</Link>
                 </div>
             </div>
         </div>
