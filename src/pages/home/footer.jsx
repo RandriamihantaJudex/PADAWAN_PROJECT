@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 
+
 function Footer() {
     return <div className="h-auto w-full flex max-md:flex-col items-center bg-[#1f1f1f] px-12 pb-6">
         <div className="w-11/12 ">
