@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import "./formation.css"
-import 'animate.css';
+
 import "./wickedcss.min.css"
 const FormationCouveture = () => {
     const nbrRef = useRef()

@@ -4,6 +4,8 @@ import { useRef } from "react";
 import FormationCouveture from "./formationCouverture";
 import Footer from "../home/footer";
 import Aos from "aos";
+import FormationFilter from "./formationFilter";
+import Astuce from "./formationAstuce";
 Aos.init();
 
 const NavBarFormation = ({ disapear }) => {
@@ -38,7 +40,7 @@ function Formation() {
     return <div>
         <WingRightDeploy wingRight={wingRight} />
         <NavBarFormation disapear={disapear} />
-        <div className="h-[80px] w-full border-b-[#131313] border text-[38px] flex items-center justify-center tracking-[10px]">
+        <div className="h-[80px] w-full border-b-[#131313] border text-[38px] flex items-center justify-center tracking-[10px] ">
             APPPRENDRE EN  <img
             src="./images/heartGreen.png"
             className="max-md:ml-0 h-[40px] w-[40px]   my-1.5 cursor-pointer animate-pulse mr-2"
@@ -47,10 +49,11 @@ function Formation() {
             ></img> <span className="text-[#008F64]">AUTODIDACTE</span>
         </div>
         <FormationCouveture/>
+        <Astuce />
+        <FormationFilter/>
+
         <Footer />
-        <div className="h-[200px] w-[100px] bg-red-600" data-aos="fade-up">
-            
-        </div>
+     
     </div>
 }
 export default Formation
