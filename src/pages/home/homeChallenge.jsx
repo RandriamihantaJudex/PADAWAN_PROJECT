@@ -1,7 +1,8 @@
 import { useRef, } from "react"
 import {useNavigate } from "react-router-dom"
 import { listDomaine } from "./variablesHome"
-
+import Aos from "aos";
+Aos.init()
 
 function Challenge() {
     const showOptionRef = useRef()
@@ -26,7 +27,7 @@ function Challenge() {
   
         showOption()
     }
-    return <div className=" w-full anime-on-show mt-10  max-md:mt-1 px-16  max-md:px-2 mb-10 max-md:mb-0 flex flex-col items-center">
+    return <div data-aos="fade-up"  className=" w-full anime-on-show mt-10  max-md:mt-1 px-16  max-md:px-2 mb-10 max-md:mb-0 flex flex-col items-center">
         <h1 className="text-[#008F64]  text-3xl max-md:text-[16px]">Challenge de la semaine</h1>
         <p className="mt-5 text-lg text-center max-md:px-5 max-md:text-[11px] max-md:mt-0bg-[red] max-md:my-1 max-md:-mt-3">Montrez de quoi vous etes capable en réalisant l’un de challenge de la semaine</p>
         <div className="h-[400px] max-md:h-[200px] w-full rounded-lg bg-white mt-8 max-md:mt-0 challengeImg">

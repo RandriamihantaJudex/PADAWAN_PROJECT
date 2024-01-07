@@ -125,7 +125,7 @@ function Couverture() {
                         <Link className="mx-10 pb-1 text-[#008F64] border-b-2 border-[#008F64] hoverLink text-md">
                             Accueil
                         </Link>
-                        <Link className="mx-10 text-md hoverLink pb-1">Formation</Link>
+                        <Link to={"/formation"} className="mx-10 text-md hoverLink pb-1">Formation</Link>
                         <Link className="mx-10 text-md pb-1 my-0 flex hoverLink">
                             Compte{" "}
                             <img

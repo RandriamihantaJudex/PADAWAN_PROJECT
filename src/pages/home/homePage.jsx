@@ -1,4 +1,4 @@
-import { createContext, useContext, useRef, useState } from "react";
+import { createContext, useContext, useRef } from "react";
 import { suggestionMentor } from "./variablesHome";
 
 import PresentationVideo from "./homeVideo";
@@ -53,27 +53,8 @@ export const homeContext = createContext();
 const ProviderHomeContext = ({ children }) => {
   const popupRef = useRef();
   let IdMentorCible = {};
-  let [divAnimateOnShow, setDivAnimateOnShow] = useState([]);
-  document.addEventListener("DOMContentLoaded", () => {
-    setDivAnimateOnShow(document.querySelectorAll(".anime-on-show"));
-  });
-  document.addEventListener("scroll", () => {
-    divAnimateOnShow.forEach((itemAnimate) => {
-      if (window.scrollY < itemAnimate.getBoundingClientRect().bottom) {
-        itemAnimate.classList.add("opacityZero");
-      }
-      else if (window.scrollY > itemAnimate.getBoundingClientRect().bottom - 100) {
-        itemAnimate.classList.remove("opacityZeror");
-        itemAnimate.style.display = "none";
-        itemAnimate.style.display = "flex";
-        itemAnimate.classList.add("divAnimateOnShowSelector");
-        itemAnimate.style.display = "flex";
-      }
-      else {
-        console.log('');
-      }
-    });
-  });
+ 
+ 
 
   const uptadeMentor = (id) => {
     let mentorGet = suggestionMentor.filter(function (item) {
@@ -88,7 +69,7 @@ const ProviderHomeContext = ({ children }) => {
   };
   return (
     <homeContext.Provider
-      value={{ divAnimateOnShow, IdMentorCible, uptadeMentor, popupRef }}
+      value={{ IdMentorCible, uptadeMentor, popupRef }}
     >
       {children}
     </homeContext.Provider>

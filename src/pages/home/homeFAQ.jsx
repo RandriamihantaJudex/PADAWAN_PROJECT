@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { questions } from "./variablesHome";
-
+import Aos from "aos";
+Aos.init();
 // DONNEE REQUIS LIGNE 74 : TABLEAU CONTENANT LES QUESTION ET SA REPONSE
 
 
@@ -49,7 +50,7 @@ function FAQ() {
             </div>
             {
                 questions.map(({ question, Reponse }) => {
-                    return <div key={Reponse} onClick={(e) => show(e, Reponse)} onMouseLeave={(e) => leave()} className="w-8/12 max-md:w-11/12 max-md:text-[11px] max-md:hover:w-11/12 max-md:hover:px-3 max-md:px-4 zIndex2 hover:bg-[#008F64] hover:border-[#008F64] hover:text-white animation2s h-[45px] hover:w-9/12 hover:px-10 cursor-pointer  flex items-center justify-between px-12 bg-white shadow-md shadow-slate-500 border-t border-[#00000049] rounded-md">
+                    return <div data-aos="zoom-in" key={Reponse} onClick={(e) => show(e, Reponse)} onMouseLeave={(e) => leave()} className="w-8/12 max-md:w-11/12 max-md:text-[11px] max-md:hover:w-11/12 max-md:hover:px-3 max-md:px-4 zIndex2 hover:bg-[#008F64] hover:border-[#008F64] hover:text-white animation2s h-[45px] hover:w-9/12 hover:px-10 cursor-pointer  flex items-center justify-between px-12 bg-white shadow-md shadow-slate-500 border-t border-[#00000049] rounded-md">
                         <p className="h-full flex items-center">{question}</p>
                         <img src="./images/chevronGreen.png" alt="chevron" className="w-5 h-5 max-md:h-3 max-md:w-3" />
                     </div>

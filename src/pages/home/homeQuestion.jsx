@@ -1,6 +1,7 @@
 
 // FONCTIONNALITE LIGNE 16 : ENVOIE DE MESSAGE A L'ADMIN
-
+import Aos from "aos";
+Aos.init();
 
 const sendQuestion = (e) => {
     e.preventDefault()
@@ -8,7 +9,7 @@ const sendQuestion = (e) => {
 
 
 function Question() {
-    return <div className="anime-on-show w-full flex justify-center mt-24 px-16 max-md:px-4  mb-16 max-md:mt-10 max-md:mb-8 " >
+    return <div data-aos="fade-up" className="anime-on-show w-full flex justify-center mt-24 px-16 max-md:px-4  mb-16 max-md:mt-10 max-md:mb-8 " >
         <div className=" h-[250px] max-md:h-auto w-full rounded-lg bg-[#1f1f1f] flex max-md:flex-col justify-between items-center px-24 max-md:px-6">
             <form className="text-white max-md:h-auto max-md:flex max-md:flex-col max-md:items-center">
                 <label htmlFor="question" className="text-3xl max-md:text-sm mt-3 max-lg:text-xl">AVEZ VOUS DES QUESTION ?</label>

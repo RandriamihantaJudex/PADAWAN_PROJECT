@@ -3,7 +3,8 @@ import { suggestionMentor } from "./variablesHome";
 import { listDomaine } from "./variablesHome";
 import { tabTrois } from "./variablesHome";
 import { homeContext } from "./homePage";
-
+import Aos from "aos";
+Aos.init()
 // DONNEE REQUIS LIGNE 90 : TABLEAU DE LISTE DES DOMAINES 
 // DONNEE REQUIS LIGNE 137 : TABLEAU DE 10 MENTOR LES PLUS ACTIFS 
 
@@ -82,7 +83,7 @@ const AllMentorList = () => {
     };
 
     return (
-        <div className="w-full flex flex-col items-center mb-16 max-md:mb-5 anime-on-show">
+        <div data-aos="fade-up" className="w-full flex flex-col items-center mb-16 max-md:mb-5 anime-on-show" >
             <h1 className="text-[#008F64]  text-3xl max-md:text-[16px]">Mentor</h1>
             <div className="slidePubParent w-full h-16 bg-[#008F64] mt-7  text-white text-lg max-md:h-9 max-md:mt-1">
                 {tabTrois.map((element) => {

@@ -31,3 +31,9 @@ code {
 .centrer{
   @apply flex items-center justify-center
 }
+.NavActive{
+  @apply hover:text-[#008F64] hover:border-b-2 hover:border-b-[#008F64] hover:pb-1
+}
+.NavActive{
+  transition: 0.1s;
+}
