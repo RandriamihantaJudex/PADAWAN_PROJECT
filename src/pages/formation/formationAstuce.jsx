@@ -1,14 +1,14 @@
 import Aos from "aos"
 import { Player } from '@lottiefiles/react-lottie-player';
 Aos.init()
-const Astuce = () => {
+const FormationAstuce = () => {
     return <div className="w-full px-[150px] mb-[40px]  " data-aos="fade-up">
         
         <div className="flex justify-between w-full items-center">
             <div className="w-1/2 ">
                 <p className="text-xl font-bold flex gap-1 items-center">
                     Conseils
-                    <img
+                    <img 
                         src="./images/etoile.png"
                         className="max-md:ml-0 h-[25px] w-[25px]  my-1.5 "
                         alt="Etoile"
@@ -28,4 +28,4 @@ const Astuce = () => {
         </div>
     </div>
 }
-export default Astuce
+export default FormationAstuce

@@ -5,8 +5,11 @@ import FormationCouveture from "./formationCouverture";
 import Footer from "../home/footer";
 import Aos from "aos";
 import FormationFilter from "./formationFilter";
-import Astuce from "./formationAstuce";
+import FormationAstuce from "./formationAstuce";
+import FormationVideo from "./formationVideo";
 Aos.init();
+
+
 
 const NavBarFormation = ({ disapear }) => {
     return <div className="h-[50px] border-b-[#131313] justify-between border w-full flex items-center px-[150px]">
@@ -49,9 +52,9 @@ function Formation() {
             ></img> <span className="text-[#008F64]">AUTODIDACTE</span>
         </div>
         <FormationCouveture/>
-        <Astuce />
+        <FormationAstuce />
         <FormationFilter/>
-
+        <FormationVideo/>
         <Footer />
      
     </div>

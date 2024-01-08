@@ -49,7 +49,7 @@ const SelectPersonnalize = ({ listes,titre}) => {
 
 
 const FiltreF = () => {
-    return <div className="h-auto w-full shadow-xl shadow-gray-300  rounded-md my-[60px]  p-1 " data-aos="fade-up">
+    return <div className="h-auto w-full shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]  rounded-md my-[60px]  p-1 " data-aos="fade-up">
         <form className="w-full h-full">
             <div className="h-[60px] flex  w-full   items-center border-b border-slate-400  justify-between">
                 <div className="flex gap-3 border-r w-1/3 h-full border-slate-400  items-center py-2">
