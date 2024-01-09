@@ -23,6 +23,10 @@ p{
 }
 .maxIndex{
   z-index: 101;
+ 
+}
+.lowIndex{
+   z-index: -1;
 }
 .dinamicNav{
   display: none;

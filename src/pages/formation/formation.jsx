@@ -7,6 +7,7 @@ import Aos from "aos";
 import FormationFilter from "./formationFilter";
 import FormationAstuce from "./formationAstuce";
 import FormationVideo from "./formationVideo";
+import NavigationBar from "../home/dinamicNav";
 Aos.init();
 
 
@@ -41,22 +42,23 @@ function Formation() {
         wingRight.current.style.display = "block";
     };
     return <div>
+        <NavigationBar disapear={disapear} />
         <WingRightDeploy wingRight={wingRight} />
         <NavBarFormation disapear={disapear} />
         <div className="h-[80px] w-full border-b-[#131313] border text-[38px] flex items-center justify-center tracking-[10px] ">
             APPPRENDRE EN  <img
-            src="./images/heartGreen.png"
-            className="max-md:ml-0 h-[40px] w-[40px]   my-1.5 cursor-pointer animate-pulse mr-2"
-            alt="chat"
-            onClick={() => disapear()}
+                src="./images/heartGreen.png"
+                className="max-md:ml-0 h-[40px] w-[40px]   my-1.5 cursor-pointer animate-pulse mr-2"
+                alt="chat"
+                onClick={() => disapear()}
             ></img> <span className="text-[#008F64]">AUTODIDACTE</span>
         </div>
-        <FormationCouveture/>
+        <FormationCouveture />
         <FormationAstuce />
-        <FormationFilter/>
-        <FormationVideo/>
+        <FormationFilter />
+        <FormationVideo />
         <Footer />
-     
+
     </div>
 }
 export default Formation

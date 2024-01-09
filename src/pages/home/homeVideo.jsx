@@ -25,7 +25,7 @@ const PresentationVideo = () => {
         MyVideo.current.hidden = true;
     };
     return (
-        <div data-aos="fade-up"  className="videoContainer w-full my-16 max-md:my-1 h-96 max-md:h-60 border-2 border-[red] centrer flex items-center justify-center anime-on-show">
+        <div data-aos="fade-up"  className="videoContainer w-full my-16 max-md:my-1 h-96 max-md:h-60 border-2 centrer flex items-center justify-center">
             <div ref={Info} className=" h-60 ">
                 <div className="redAbsolute h-60 flex items-center justify-center   ">
                     <div className="testDiv rounded-lg centrer  mx-6 m-2 max-lg:w-full w-[500px]">

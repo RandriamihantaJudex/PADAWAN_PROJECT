@@ -49,7 +49,7 @@ const CarteTemoignage = ({nom,prenom,domaine,temoignage,star}) => {
 
 
 function Temoignage() {
-    return <div data-aos="fade-up"  className=" w-full flex flex-col items-center anime-on-show mt-24 mb-16 max-md:mt-8 max-md:mb-0">
+    return <div data-aos="fade-up"  className=" w-full flex flex-col items-center mt-24 mb-16 max-md:mt-8 max-md:mb-0">
         <h2 className="text-[#008F64] text-3xl textTemoin max-md:text-[16px]">Retour d’expérience de la communauté</h2>
         <div className="avisParent w-10/12 h-[320px] flex mt-7 max-md:mt-2 max-md:gap-[10px] gap-[20px] max-md:w-11/12 max-lg:items-center max-lg:flex-col max-lg:h-auto">
                 {

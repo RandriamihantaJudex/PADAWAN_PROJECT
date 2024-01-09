@@ -36,7 +36,7 @@ const SelectPersonnalize = ({ listes,titre}) => {
 
             ></img>
                 </button>
-                <div className="absolute  bg-[#202020] text-white p-1 hidden" ref={inputRef}>
+        <div className="absolute  bg-[#202020] text-white p-1 hidden maxIndex rounded-b-md" ref={inputRef} >
                     {
                         listes.map((liste) => {
                             return <p key={liste} className="p-1 w-full hover:bg-[#008F64] cursor-pointer" onClick={(e) => pickFilter(liste,e)}>{liste}</p>
@@ -49,7 +49,7 @@ const SelectPersonnalize = ({ listes,titre}) => {
 
 
 const FiltreF = () => {
-    return <div className="h-auto w-full shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]  rounded-md my-[60px]  p-1 " data-aos="fade-up">
+    return <div className="h-auto w-full shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]  rounded-md my-[60px]  p-1 " >
         <form className="w-full h-full">
             <div className="h-[60px] flex  w-full   items-center border-b border-slate-400  justify-between">
                 <div className="flex gap-3 border-r w-1/3 h-full border-slate-400  items-center py-2">

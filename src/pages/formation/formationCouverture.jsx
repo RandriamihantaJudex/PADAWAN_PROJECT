@@ -3,24 +3,34 @@ import "./formation.css"
 
 import "./wickedcss.min.css"
 const FormationCouveture = () => {
-    const nbrRef = useRef()
+   
 
- const intervalNombre = (cible, nombre, seconde) => {
-        let nbrVideo = 0
-        const myInterval = setInterval(() => {
-            nbrVideo++
-            cible.current.innerHTML = `+ ${nbrVideo}`
-            if (nbrVideo > nombre - 1) {
-                cible.current.classList.add('videoAnimation')
-                clearInterval(myInterval)
-                setTimeout(() => {
-                    cible.current.classList.remove('videoAnimation')
-                }, 600);
-                
+
+   
+
+
+    const AnimeNombre=()=>{
+        setTimeout(() => {
+            const nbrRef = document.querySelector(".nombreVue")
+            const intervalNombre = (nombre, seconde) => {
+                let nbrVideo = 0
+                const myInterval = setInterval(() => {
+                    nbrVideo++
+                    nbrRef.innerHTML = `+ ${nbrVideo}`
+                    if (nbrVideo > nombre - 1) {
+                        nbrRef.classList.add('videoAnimation')
+                        clearInterval(myInterval)
+                        setTimeout(() => {
+                            nbrRef.classList.remove('videoAnimation')
+                        }, 600);
+                    }
+                }, seconde);
             }
-        }, seconde);
+            intervalNombre(100, 40)
+        }, 1000);
+       
+        return <p className="text-2xl font-extrabold nombreVue" ></p>
     }
-    intervalNombre(nbrRef, 100, 40)
 
     return (
         <div className="px-[150px] flex w-full items-center justify-between mb-[100px] mt-[60px]">
@@ -66,7 +76,7 @@ const FormationCouveture = () => {
                 />
                 <div className="flex mt-[20px] justify-evenly w-full ">
                     <div className="flex flex-col  items-center">
-                        <p className="text-2xl font-extrabold " ref={nbrRef}></p>
+                        <AnimeNombre/>
                         <p className="text-md font-semibold">Videos</p>
                     </div>
                     <div className="flex flex-col items-center">

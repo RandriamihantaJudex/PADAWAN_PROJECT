@@ -42,7 +42,7 @@ function FAQ() {
 
 
 
-    return <div className="anime-on-show w-auto h-auto flex flex-col text-[#008F64] items-center mb-16">
+    return <div className="w-auto h-auto flex flex-col text-[#008F64] items-center mb-16">
         <h1 className="text-3xl mb-7 max-md:text-lg max-md:mb-2" >FAQ</h1>
         <div className="w-full flex flex-col items-center gap-3" ref={refParent}>
             <div className="cacher max-md:text-[11px] absolute max-md:w-11/12 h-auto bg-[#1f1f1f] w-9/12 py-4 px-10 max-md:px-5 max-md:py-2 flex items-center rounded-md text-white" ref={testRef}>
