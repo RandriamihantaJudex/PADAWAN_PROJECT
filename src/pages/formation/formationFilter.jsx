@@ -10,40 +10,43 @@ const langues = [
 ]
 
 // INPUT SELECT PERSONNALISER
-const SelectPersonnalize = ({ listes,titre}) => {
+const SelectPersonnalize = ({ listes, titre }) => {
     const [selectedItems, setSelectedItems] = useState(titre)
     const inputRef = useRef()
-    const pickFilter=(item,e)=>{
+    const pickFilter = (item, e) => {
         setSelectedItems(item)
         showSelect(e)
     }
-    const showSelect=(e)=>{
+    const showSelect = (e) => {
         e.preventDefault()
-        inputRef.current.classList.contains('hidden') ? 
-        inputRef.current.classList.remove("hidden"):
-        inputRef.current.classList.add("hidden") 
+        inputRef.current.classList.contains('hidden') ?
+            inputRef.current.classList.remove("hidden") :
+            inputRef.current.classList.add("hidden")
+    }
+    const onLeave = () => {
+        inputRef.current.classList.add("hidden")
     }
     setTimeout(() => {
         inputRef.current.style.width = inputRef.current.parentNode.clientWidth + "px"
     }, 1000);
-    return <div className="">
+    return <div className="" onMouseLeave={() => onLeave()}>
         <button className="flex items-center gap-4 text-white bg-[#008F64] px-[20px] h-[40px] rounded-md" onClick={(e) => showSelect(e)}>
-            {selectedItems} 
+            {selectedItems}
             <img
                 src="./images/chevronDownWhite.png "
                 className="h-5 w-5 cursor-pointer  "
                 alt="menu"
 
             ></img>
-                </button>
+        </button>
         <div className="absolute  bg-[#202020] text-white p-1 hidden maxIndex rounded-b-md" ref={inputRef} >
-                    {
-                        listes.map((liste) => {
-                            return <p key={liste} className="p-1 w-full hover:bg-[#008F64] cursor-pointer" onClick={(e) => pickFilter(liste,e)}>{liste}</p>
-                        })
-                    }
-                </div>
+            {
+                listes.map((liste) => {
+                    return <p key={liste} className="p-1 w-full hover:bg-[#008F64] cursor-pointer" onClick={(e) => pickFilter(liste, e)}>{liste}</p>
+                })
+            }
         </div>
+    </div>
 }
 
 
@@ -69,11 +72,18 @@ const FiltreF = () => {
 
                     ></img>
                 </div>
-                <button type="submit" className="bg-[#008F64] text-white px-[25px] rounded-md h-[45px]">Rechercher</button>
+                <button type="submit" className="bg-[#008F64] text-white px-[25px] rounded-md h-[45px] flex items-center gap-2">                    Rechercher
+                    <img
+                        src="./images/chevron_down.png "
+                        className="h-5 w-5 cursor-pointer rotate-180 "
+                        alt="menu"
+
+                    ></img>
+                </button>
             </div>
             <div className="h-[60px] w-full flex p-2 items-center gap-5">
-                    <SelectPersonnalize listes={langues} titre={'Langues'}/>
-                    <SelectPersonnalize listes={listeFormation} titre={'Listes des formations'} />
+                <SelectPersonnalize listes={langues} titre={'Langues'} />
+                <SelectPersonnalize listes={listeFormation} titre={'Listes des formations'} />
             </div>
 
         </form>

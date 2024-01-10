@@ -10,10 +10,12 @@
 }
 
 .imgFloat{
-    animation: floatImage 3s infinite;
+    animation: floatImage 4s infinite;
 }
+
 @keyframes floatImage {
-    0%{
+   
+     0%{
     transform:rotate(0deg);   
  }
  25%{
@@ -25,7 +27,9 @@
  75%{
     transform: rotate(5deg); 
  }
+
     100%{
     transform: rotate(0deg);   
-    }
+    } 
 }
+

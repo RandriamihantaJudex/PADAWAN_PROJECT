@@ -12,6 +12,7 @@ const FormationCouveture = () => {
     const AnimeNombre=()=>{
         setTimeout(() => {
             const nbrRef = document.querySelector(".nombreVue")
+            // ANIMATION INCREMENTATION DES NOMBRE DE VIDEO
             const intervalNombre = (nombre, seconde) => {
                 let nbrVideo = 0
                 const myInterval = setInterval(() => {
@@ -61,11 +62,14 @@ const FormationCouveture = () => {
                     Les formation constituent une source inestimable pour votre
                     apprentissage. Explorez tous ce que vous souhaitez etudier.
                 </p>
-                <img
-                    src="./images/study.jpg"
-                    alt="girl study "
-                    className="object-cover rounded-xl h-[260px] w-9/12 floater"
-                />
+                <div className="imgFloat w-9/12">
+                    <img
+                        src="./images/study.jpg"
+                        alt="girl study "
+                        className="object-cover rounded-xl h-[260px] w-full floater"
+                    />
+                </div>
+               
             </div>
 
             <div className="h-full flex flex-col w-4/12 items-center">
@@ -88,11 +92,13 @@ const FormationCouveture = () => {
 
 
             <div className="flex flex-col w-3/12 mb-[60px] gap-[20px] items-end">
+                <div className="imgFloat w-9/12">
                 <img
                     src="./images/futuristic_girl.jpg"
                     alt="girl study "
-                    className="object-cover rounded-xl h-[260px] w-9/12 floater"
+                    className="object-cover rounded-xl h-[260px] w-full floater"
                 />
+                </div>
                 <p className="text-justify ">
                     Les formation constituent une source inestimable pour votre
                     apprentissage. Explorez tous ce que vous souhaitez etudier.
