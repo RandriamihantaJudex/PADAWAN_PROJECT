@@ -1,34 +1,28 @@
-import { Link } from "react-router-dom"
-import WingRightDeploy from "../home/menuSlide"
-import { useRef } from "react";
-import FormationCouveture from "./formationCouverture";
-import Footer from "../home/footer";
+import { Link ,Outlet,useNavigate} from "react-router-dom"
+
 import Aos from "aos";
-import FormationFilter from "./formationFilter";
-import FormationAstuce from "./formationAstuce";
-import FormationVideo from "./formationVideo";
-import NavigationBar from "../home/dinamicNav";
+
+import MobileNav from "./navmobile";
 Aos.init();
 
 
-
-const NavBarFormation = ({ disapear }) => {
-    return <div className="h-[50px] border-b-[#131313] justify-between border w-full flex items-center px-[150px]">
-        <Link >
+export const NavBarFormation = ({ disapear }) => {
+    return <div className="h-[50px] border-b-slate-500  justify-between border w-full flex items-center px-[150px] max-md:px-[25px] ">
+        <Link to={'/'}>
             <img
-                src="./images/flecheBlack.png"
+                src="./../images/flecheBlack.png"
                 className="max-md:ml-0 h-[35px] w-[35px]  my-1.5 flecheDroiteFormation"
                 alt="chat"
             ></img>
         </Link>
-        <ul className="flex gap-12">
+        <ul className="flex gap-12 max-md:hidden">
             <li className="tracking-widest NavActive transition-2"><Link to={"/"}>Accueil</Link></li>
             <li className="tracking-widest text-[#008F64] border-b-2 border-b-[#008F64] pb-1"><Link>Formation</Link></li>
             <li className="tracking-widest NavActive"><Link>Compte</Link></li>
         </ul>
         <img
-            src="./images/menuBlack.png"
-            className="max-md:ml-0 h-[25px] w-[25px]   my-1.5 cursor-pointer hover:animate-spin"
+            src="./../images/menuBlack.png"
+            className="max-md:ml-0 h-[25px] w-[25px] my-1.5 cursor-pointer hover:animate-spin"
             alt="chat"
             onClick={() => disapear()}
         ></img>
@@ -37,28 +31,18 @@ const NavBarFormation = ({ disapear }) => {
 }
 
 function Formation() {
-    const wingRight = useRef();
-    const disapear = () => {
-        wingRight.current.style.display = "block";
-    };
+    const aller=useNavigate()
+    const url= document.documentURI
+    setTimeout(() => {
+        // LIEN A METTRE A JOUR EN LIGNE
+        if (url ==='http://localhost:3000/formation'){
+            aller('/formation/home')
+        }
+    }, 1000);
+   
     return <div>
-        <NavigationBar disapear={disapear} />
-        <WingRightDeploy wingRight={wingRight} />
-        <NavBarFormation disapear={disapear} />
-        <div className="h-[80px] w-full border-b-[#131313] border text-[38px] flex items-center justify-center tracking-[10px] ">
-            APPPRENDRE EN  <img
-                src="./images/heartGreen.png"
-                className="max-md:ml-0 h-[40px] w-[40px]   my-1.5 cursor-pointer animate-pulse mr-2"
-                alt="chat"
-                onClick={() => disapear()}
-            ></img> <span className="text-[#008F64]">AUTODIDACTE</span>
-        </div>
-        <FormationCouveture />
-        <FormationAstuce />
-        <FormationFilter />
-        <FormationVideo />
-        <Footer />
-
+        <MobileNav />
+        <Outlet/>
     </div>
 }
 export default Formation

@@ -1,14 +1,29 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { suggestionMentor } from "./variablesHome";
 import { listDomaine } from "./variablesHome";
 import { tabTrois } from "./variablesHome";
 import { homeContext } from "./homePage";
 import Aos from "aos";
+import { getMentor } from "../../api/mentorApi";
 Aos.init()
 // DONNEE REQUIS LIGNE 90 : TABLEAU DE LISTE DES DOMAINES 
 // DONNEE REQUIS LIGNE 137 : TABLEAU DE 10 MENTOR LES PLUS ACTIFS 
 
+
+
+
 const AllMentorList = () => {
+
+    // const [mentorList,setMentorList]=useState()
+    // useEffect(()=>{
+    //     async function getMentorList(){
+    //         const mentors= await getMentor()
+    //         setMentorList(mentors)
+    //     }
+    //     getMentorList()
+    // },[])
+
+
     const sliderMentor = useRef();
     const tailleCarteMentor = useRef();
     const ProviderData = useContext(homeContext);
@@ -81,7 +96,7 @@ const AllMentorList = () => {
             }
         }
     };
-    
+
     return (
         <div data-aos="fade-up" className="w-full flex flex-col items-center mb-16 max-md:mb-5" >
             <h1 className="text-[#008F64]  text-3xl max-md:text-[16px]">Mentor</h1>

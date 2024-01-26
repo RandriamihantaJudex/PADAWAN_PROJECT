@@ -33,3 +33,13 @@
     } 
 }
 
+.mobileNav{
+    margin-top: calc(100vh - 50px);
+}
+
+.navMobileActive {
+background-color: #008F64;
+}
+.noir {
+background-color: #212121;
+}

@@ -29,7 +29,7 @@ const WingRightDeploy = ({ wingRight }) => {
 
     return (
         <div
-            className="testMargin avanceAnimation h-full  bg-[#008F64]  absolute max-md:w-full rounded-bl-lg"
+            className="testMargin avanceAnimation bg-[#008F64]  absolute max-md:w-full rounded-bl-lg"
             ref={wingRight}
         >
             <div className="flex">
