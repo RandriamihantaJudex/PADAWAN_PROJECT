@@ -147,7 +147,7 @@ const WingRightDeploy = ({ wingRight }) => {
 
                     {/* NAVIGATION */}
                     <div className="flex flex-col items-center w-full text-white">
-                        <Link className="flex w-10/12 justify-between px-4 py-1 rounded-md hover:border-2 hover:border-white mt-1 transition">
+                        <Link to={'/'} className="flex w-10/12 justify-between px-4 py-1 rounded-md hover:border-2 hover:border-white mt-1 transition">
                             Accueil{" "}
                             <img
                                 src="./images/sun.png"
@@ -155,7 +155,7 @@ const WingRightDeploy = ({ wingRight }) => {
                                 className="h-5 w-6 pl-1 mt-0.5"
                             />
                         </Link>
-                        <Link className="flex w-10/12 justify-between px-4 py-1 rounded-md hover:border-2 hover:border-white mt-1 transition">
+                        <Link to={'/formation'} className="flex w-10/12 justify-between px-4 py-1 rounded-md hover:border-2 hover:border-white mt-1 transition">
                             Formation{" "}
                             <img
                                 src="./images/video.png"

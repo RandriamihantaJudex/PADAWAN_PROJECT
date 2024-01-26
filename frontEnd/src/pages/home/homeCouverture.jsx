@@ -6,6 +6,17 @@ import NavigationBar from "./dinamicNav";
 
 // DONNEE REQUIS LIGNE 155 : TABLEAU DE LISTE DES DOMAINES
 
+export const MiniNavMobile = ({ disapear }) => {
+    return <div className="maxIndex h-11 w-full bg-[#008F64] px-8 flex items-center justify-between text-white md:hidden fixed">
+        <h1 className="text-3xl">P</h1>
+        <img
+            src="./images/menu.png"
+            className="h-7 w-7 cursor-pointer menuAnimate "
+            alt="menu"
+            onClick={(e) => disapear()}
+        ></img>
+    </div>
+}
 
 function Couverture() {
     const wingRight = useRef();
@@ -13,7 +24,7 @@ function Couverture() {
         wingRight.current.style.display = "block";
     };
    
-
+   
       
 
     const WingRight = () => {
@@ -94,15 +105,7 @@ function Couverture() {
                             />
                         </Link>
                     </div>
-                    <div className="maxIndex h-11 w-full bg-[#008F64] px-8 flex items-center justify-between text-white md:hidden fixed">
-                        <h1 className="text-3xl">P</h1>
-                        <img
-                            src="./images/menu.png"
-                            className="h-7 w-7 cursor-pointer menuAnimate "
-                            alt="menu"
-                            onClick={(e) => disapear()}
-                        ></img>
-                    </div>
+                    <MiniNavMobile disapear={disapear}/>
                     <h1 className="grandTitre text-[#008F64] text-6xl w-8/12 text-center font-black mt-20  max-md:mt-24 max-md:text-xl  max-lg:text-4xl">
                         Commencer votre propre aventure.
                     </h1>

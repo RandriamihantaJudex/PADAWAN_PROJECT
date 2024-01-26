@@ -2,12 +2,6 @@ import "./formation.css"
 
 import "./wickedcss.min.css"
 const FormationCouveture = () => {
-
-
-
-
-
-
     const AnimeNombre = () => {
         setTimeout(() => {
             const nbrRef = document.querySelector(".nombreVue")

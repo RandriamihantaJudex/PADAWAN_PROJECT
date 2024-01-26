@@ -1,13 +1,14 @@
-import { Link ,Outlet,useNavigate} from "react-router-dom"
+import { Link} from "react-router-dom"
 
 import Aos from "aos";
 
 import MobileNav from "./navmobile";
+import FormationHome from "./formationHome";
 Aos.init();
 
 
 export const NavBarFormation = ({ disapear }) => {
-    return <div className="h-[50px] border-b-slate-500  justify-between border w-full flex items-center px-[150px] max-md:px-[25px] ">
+    return <div className="h-[50px] border-b-slate-500  justify-between border w-full flex items-center px-[150px] max-md:px-[25px] max-md:opacity-0">
         <Link to={'/'}>
             <img
                 src="./../images/flecheBlack.png"
@@ -31,18 +32,18 @@ export const NavBarFormation = ({ disapear }) => {
 }
 
 function Formation() {
-    const aller=useNavigate()
-    const url= document.documentURI
-    setTimeout(() => {
-        // LIEN A METTRE A JOUR EN LIGNE
-        if (url ==='http://localhost:3000/formation'){
-            aller('/formation/home')
-        }
-    }, 1000);
-   
+    // const aller=useNavigate()
+    // const url= document.documentURI
+    // setTimeout(() => {
+    //     // LIEN A METTRE A JOUR EN LIGNE
+    //     if (url ==='http://localhost:3000/formation'){
+    //         aller('/formation/home')
+    //     }
+    // }, 1000);
+    
     return <div>
-        <MobileNav />
-        <Outlet/>
+        <MobileNav lien={'.'} activer={0}/>
+        <FormationHome/>
     </div>
 }
 export default Formation

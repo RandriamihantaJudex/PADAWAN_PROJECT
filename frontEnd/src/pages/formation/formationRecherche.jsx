@@ -1,4 +1,5 @@
 import { useRef } from "react"
+import MobileNav from "./navmobile"
 
 
 const VideoFind = () => {
@@ -24,20 +25,25 @@ const FormationRecherche = () => {
     const nullValue=()=>{
         inputRef.current.value=''
     }
-    return <div className="w-full h-auto px-[25px] py-[15px] ">
-        <form className="h-[40px] w-full bg-[#008F64] rounded-md flex items-center justify-evenly px-[8px] gap-[10px]">
-            <img onClick={() => nullValue()} src="./../images/close.png" alt="recherche" className="h-[15px] w-[15px]" />
-            <input type="text" ref={inputRef} placeholder="Recherche" className="h-10/12 bg-transparent p-[3px] text-[12px] w-9/12 placeholder:text-white text-white tracking-wide" />
-            <button type="submit"> <img src="./../images/rechercheW.png" alt="recherche" className="h-[18px] w-[18px]" /></button>
-        </form>
-        <div className="mt-[30px]">
-            <VideoFind />
-            <VideoFind />
-            <VideoFind />
-            <VideoFind />
-            <VideoFind />
-            <VideoFind />
+    return <div className="w-full h-auto  ">
+        <MobileNav lien={'./..'} activer={1} />
+        
+        <div className="w-full h-auto px-[25px] py-[15px]">
+            <form className=" h-[40px] w-full bg-[#008F64] rounded-md flex items-center justify-evenly px-[8px] gap-[10px]">
+                <img onClick={() => nullValue()} src="./../images/close.png" alt="recherche" className="h-[15px] w-[15px]" />
+                <input type="text" ref={inputRef} placeholder="Recherche" className="h-10/12 bg-transparent p-[3px] text-[12px] w-9/12 placeholder:text-white text-white tracking-wide" />
+                <button type="submit"> <img src="./../images/rechercheW.png" alt="recherche" className="h-[18px] w-[18px]" /></button>
+            </form>
+            <div className="mt-[30px]">
+                <VideoFind />
+                <VideoFind />
+                <VideoFind />
+                <VideoFind />
+                <VideoFind />
+                <VideoFind />
+            </div>
         </div>
+        
     </div>
 }
 export default FormationRecherche
