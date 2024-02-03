@@ -1,0 +1,6 @@
+.switchActive{
+    @apply border-[#008f64]  text-[#008f64] border-b-[4px]
+}
+.switchNotActive{
+    @apply text-slate-300 border-slate-300
+}
