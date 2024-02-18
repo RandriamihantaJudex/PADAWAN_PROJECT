@@ -15,18 +15,62 @@ import { getMentor } from "../../api/mentorApi";
 
 
 
+
 const AllMentorList = () => {
+    // async function take(){
+    //         window.axios.get(`https://randomuser.me/api/?results=10`)
+    //         .then(response=>{
+    //             const {data}=response
+    //             return data.results 
+    //         })
+    //         .catch(error=>{
+    //             console.log(error);
+    //         })
+    // }
+    // let free = take()
+    // console.log(free);
+
+
+
+
+
+    async function effectuerRequeteGet(url) {
+        try {
+            const { data } = await window.axios.get(url);
+            return data.results;
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    // Utilisation de la fonction
+    // let moi
+    // (async () => {
+    //     try {
+    //         moi = await effectuerRequeteGet('https://randomuser.me/api/?results=10');
+    //         console.log(moi);
+    //     } catch (error) {
+    //         console.error('Erreur lors de la requête GET', error);
+    //     }
+    // })();
+
+
+
+
 
     // const [mentorList, setMentorList] = useState()
-    useEffect(() => {
-    //    const rep= getMentor()
-    //     console.log(rep);
-    }, [])
+    // useEffect(() => {
+    // async function get10Mentor(){
+    //     const mentorTake=await getMentor()
+    //     setMentorList(mentorTake)
+    //     console.log(mentorList);
+    // }
+    // get10Mentor()
+    // }, [])
 
 
 
 
-    
 
     const sliderMentor = useRef();
     const tailleCarteMentor = useRef();
@@ -55,7 +99,7 @@ const AllMentorList = () => {
         if (document.children[0].clientWidth > 700) {
             tailleCarte = [200, 600, 200];
         } else {
-            tailleCarte =  [180, 0, 120];
+            tailleCarte = [180, 0, 120];
         }
         if (e.target.localName === "div" || e.target.localName === "img") {
             if (!e.target.parentNode.children[1].classList.contains("show")) {
@@ -138,8 +182,7 @@ const AllMentorList = () => {
                     onClick={() => scrollMentor("right")}
                 >
 
-                    <FontAwesomeIcon icon={faChevronDown} className="h-5 w-5 -rotate-90 cursor-pointer text-white" />
-
+                   
                 </div>
                 <div
                     className=" .containerMentoImage h-11/12 w-[3000px]  flex gap-[20px] items-center pl-[20px] "
@@ -147,30 +190,20 @@ const AllMentorList = () => {
                 >
                     {suggestionMentor.map((mentor) => {
                         return (
-                            <div
-                                key={mentor.nom}
-                                onClick={(e) => clickOnMontor(e)}
-                                className="cursor-pointer w-auto bg-[#008F64] flex items-center justify-evenly rounded-md"
-                            >
-                                <img
-                                    src={mentor.image}
-                                    alt="mentor"
-                                    className="h-[300px] w-[200px] rounded-lg max-md:w-[120px] max-md:h-[170px]"
-                                    ref={tailleCarteMentor}
-                                />
+                            <div key={mentor.nom} onClick={(e) => clickOnMontor(e)} className="cursor-pointer w-auto bg-[#008F64] flex items-center justify-evenly rounded-md" >
+                                <img src={mentor.image} alt="mentor" className="h-[300px] w-[200px] rounded-lg max-md:w-[120px] max-md:h-[170px]" ref={tailleCarteMentor} />
                                 <div className="dontShow h-[300px] w-[380px]  max-md:w-[200px] text-white flex flex-col justify-between p-7 max-md:h-[170px] max-md:p-2 ">
                                     <div className="w-full  h-[55px] flex justify-between">
                                         <div>
-                                            <h1 className=" text-[17px] tracking-wide pr-2 max-md:text-[12px] text-ellipsis">
-                                                {mentor.nom}
-                                            </h1>
-                                            <p className="text-[13px] max-md:text-[10px]">
-                                                {mentor.domaine}
-                                            </p>
+                                            <h1 className=" text-[17px] tracking-wide pr-2 max-md:text-[12px] text-ellipsis"> {mentor.nom}</h1>
+                                            <p className="text-[13px] max-md:text-[10px]"> {mentor.domaine}</p>
                                         </div>
                                         <div className="flex flex-col items-center pt-0.5 h-6 w-6">
                                             <FontAwesomeIcon icon={faHeart} className="h-6 w-6 max-md:h-4 max-md:w-4 " />
-                                            <p className="max-md:text-[10px]">{mentor.like}</p>
+                                            <p className="max-md:text-[10px]">
+                                                {mentor.like}
+                                                {/* {moi[0].name} */}
+                                            </p>
                                         </div>
                                     </div>
                                     <p className="max-md:text-[8px] md:-mt-10 -mt-6">
@@ -178,18 +211,9 @@ const AllMentorList = () => {
                                     </p>
                                     {boolBouton ? (
                                         <button
-                                            className="w-auto text-[#008F64] bg-white py-2 rounded-md hover:opacity-90 max-md:py-1 max-md:text-[12px]"
-                                            onClick={() => ProviderData.uptadeMentor(mentor.nom)}
-                                        >
-                                            Envoyer une demande
-                                        </button>
+                                            className="w-auto text-[#008F64] bg-white py-2 rounded-md hover:opacity-90 max-md:py-1 max-md:text-[12px]" onClick={() => ProviderData.uptadeMentor(mentor.nom)}>Envoyer une demande</button>
                                     ) : (
-                                        <button
-                                            className="w-auto text-white bg-[#1f1f1f] py-2 rounded-md hover:bg-[#272727] max-md:py-1 max-md:text-[12px]"
-                                            onClick={() => sendRequest()}
-                                        >
-                                            Annuler la demande
-                                        </button>
+                                        <button className="w-auto text-white bg-[#1f1f1f] py-2 rounded-md hover:bg-[#272727] max-md:py-1 max-md:text-[12px]" onClick={() => sendRequest()}>Annuler la demande</button>
                                     )}
                                 </div>
                             </div>
@@ -200,6 +224,7 @@ const AllMentorList = () => {
         </div>
     );
 };
+
 
 
 export default AllMentorList;
