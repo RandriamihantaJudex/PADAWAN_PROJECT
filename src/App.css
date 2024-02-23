@@ -545,3 +545,33 @@ background-position: center;
   background-color: red;
 }
 
+
+
+
+.powerSlide{
+  animation: slidePower 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidePower {
+  0%{
+    margin-left:-50vw;
+  } 
+  100%{
+    margin-left:0vw;
+  }
+}
+
+.exitSlide{
+  animation: leavePower 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes leavePower {
+  0%{
+    margin-left:0vw;
+  } 
+  100%{
+    margin-left:-50vw;
+  }
+}

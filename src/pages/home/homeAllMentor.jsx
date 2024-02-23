@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { getMentor } from "../../api/mentorApi";
+import axios from "axios";
 // DONNEE REQUIS : TABLEAU DE LISTE DES DOMAINES 
 // DONNEE REQUIS  : TABLEAU DE 10 MENTOR LES PLUS ACTIFS 
 
@@ -18,7 +19,7 @@ import { getMentor } from "../../api/mentorApi";
 
 const AllMentorList = () => {
     // async function take(){
-    //         window.axios.get(`https://randomuser.me/api/?results=10`)
+    //         axios.get(`https://randomuser.me/api/?results=10`)
     //         .then(response=>{
     //             const {data}=response
     //             return data.results 
@@ -34,14 +35,14 @@ const AllMentorList = () => {
 
 
 
-    async function effectuerRequeteGet(url) {
-        try {
-            const { data } = await window.axios.get(url);
-            return data.results;
-        } catch (error) {
-            throw error;
-        }
-    }
+    // async function effectuerRequeteGet(url) {
+    //     try {
+    //         const { data } = await window.axios.get(url);
+    //         return data.results;
+    //     } catch (error) {
+    //         throw error;
+    //     }
+    // }
 
     // Utilisation de la fonction
     // let moi
@@ -182,7 +183,8 @@ const AllMentorList = () => {
                     onClick={() => scrollMentor("right")}
                 >
 
-                   
+                    <FontAwesomeIcon icon={faChevronDown} className="h-5 w-5 -rotate-90 cursor-pointer text-white" />
+
                 </div>
                 <div
                     className=" .containerMentoImage h-11/12 w-[3000px]  flex gap-[20px] items-center pl-[20px] "

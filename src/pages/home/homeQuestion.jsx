@@ -1,5 +1,7 @@
 
 // FONCTIONNALITE LIGNE 16 : ENVOIE DE MESSAGE A L'ADMIN
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import Aos from "aos";
 Aos.init();
 
@@ -17,7 +19,7 @@ function Question() {
                     <input type="test" name="question" className="max-lg:py-2 text-[#1f1f1f] w-[500px] py-4 outline-none max-md:py-2 rounded-bl-md rounded-tl-md max-lg:w-[230px] px-2 max-md:text-[10px] " placeholder="Posez les ici ..." />
                     <button type="submit" onClick={(e) => sendQuestion(e)} className="centrer max-lg:w-[110px] hover:bg-emerald-600 w-[150px]  max-md:w-[50px] rounded-br-md rounded-tr-md bg-[#008F64]">
                         <span className="max-md:hidden">Envoyer</span>
-                        <img src="./images/send.png" alt="love" className="h-5 w-5  md:hidden rotate-45"></img>
+                        <FontAwesomeIcon icon={faPaperPlane} />
                         </button>
                 </div>
             </form>

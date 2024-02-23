@@ -4,3 +4,92 @@
 .switchNotActive{
     @apply text-slate-300 border-slate-300
 }
+
+
+.greenSwitch{
+ animation: droite 1.2s;
+ animation-fill-mode: forwards; 
+}
+.greenSwitch2{
+    animation: droite2 1.2s;
+    animation-fill-mode: forwards; 
+}
+   
+@keyframes droite {
+    0%{
+        margin-left: 0vw;
+    }
+    100%{
+        margin-left: 50vw;
+    }
+}
+@keyframes droite2 {
+    0%{
+        margin-left: 50vw;
+    }
+    100%{
+        margin-left: 0vw;
+    }
+}
+
+.animationConnexion{
+    animation: flou 0.5;
+}
+
+@keyframes flou {
+    0%{
+        background-color: red;
+        opacity: 0;
+    }
+    100%{
+        background-color: yellow;
+        opacity: 1;
+    }
+}
+.green{
+    background-color: #008f64;
+}
+.noGreen{
+    background-color: #e9e9e9
+
+}
+.green2{
+    background-color: #008f64;
+    color: white;
+}
+.noGreen2{
+    background-color: #e9e9e9;
+    color:#717171;
+}
+
+.ConnectionMoove{
+    animation:moove 2.5s infinite;
+    
+}
+@keyframes moove {
+    0%{
+        transform: translatey(0px);
+    }
+    50%{
+        transform: translatey(-20px);
+    }
+    100%{transform: translatey(0px);}
+}
+
+:root{
+    --animate-duration:10s;
+}
+
+
+.popExp{
+    animation: slideDownExp 1.5s;
+}
+
+@keyframes slideDownExp {
+      0%{
+        transform: translatey(-400px);
+    }
+   
+    100%{transform: translatey(0px);}
+
+}
