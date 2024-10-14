@@ -13,7 +13,8 @@ function App() {
       <GlobalProvider>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path={"/formation"} element={ boole==='true'?<Formation />:<Connexion />} />
+          // <Route path={"/formation"} element={ boole==='true'?<Formation />:<Connexion />} />
+  <Route path={"/formation"} element={ <Formation /> />
           <Route path="/formation/recherche" element={<FormationRecherche />} />
           <Route path="/challenge" element={<></>} />
           <Route path="/login" element={<Connexion />} />
